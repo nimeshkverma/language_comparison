@@ -1,0 +1,6 @@
+go version go1.5.2
+database/sql --> https://github.com/bmizerany/pq
+
+
+Reads:
+https://godoc.org/github.com/lib/pq
