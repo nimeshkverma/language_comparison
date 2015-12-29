@@ -1,9 +1,8 @@
-
 ## Details
-Language: Scala
+Language: go
 Version: go1.5.2
 
-Framework: Play
+Framework: None
 Version: None
 
 Packages used: database/sql, net/http, github.com/lib/pq
