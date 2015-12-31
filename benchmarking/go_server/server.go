@@ -10,15 +10,17 @@ import (
 )
 
 const (
-    DB_USER     = "nimesh"
-    DB_PASSWORD = ""
-    DB_NAME     = "benchmarking_db"
+    DB_USER     = "test1"
+    DB_PASSWORD = "mypassword"
+    DB_NAME     = "testdb"
+    DB_HOST     = "host_ip"
+    DB_PORT     = "5432"
 )
 
 func perform_crud(w http.ResponseWriter, r *http.Request) {
 
-    dbinfo := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable",
-        DB_USER, DB_PASSWORD, DB_NAME)
+    dbinfo := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
+        DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME)
     db, err := sql.Open("postgres", dbinfo)
     checkErr(err)
     defer db.Close()

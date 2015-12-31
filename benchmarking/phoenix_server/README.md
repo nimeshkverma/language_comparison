@@ -10,6 +10,10 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
 
+## API's
+	- GET API to perform psql CRUD operations at `http://127.0.0.1:4000/crud`
+	- GET API to sleep for `a` milli seconds at `http://127.0.0.1:4000/time_block?ms=a`
+
 ## Learn more
 
   * Official website: http://www.phoenixframework.org/

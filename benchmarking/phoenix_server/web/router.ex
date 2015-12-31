@@ -18,6 +18,7 @@ defmodule PhoenixServer.Router do
 
     get "/", PageController, :index
     get "/response", PageController, :response
+    get "/crud", PageController, :crud
   end
 
   # Other scopes may use custom stacks.

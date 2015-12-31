@@ -1,10 +1,12 @@
 PSQL_PARAMS= {
-	"host" : "127.0.0.1",
-	"user" : "nimesh",
-	"password": "''",
+	"host" : "host_ip",
+	"user" : "test1",
+	"password": "mypassword",
 	"port": "5432",
-	"dbname": "benchmarking_db"
+	"dbname": "testdb"
 }
+
+CRUD_KEYS = ["create","read","update","delete"]
 
 QUERY_DICT = {
 	"create" : "INSERT INTO data_source(primary_id, data_int, data_string) VALUES(100,100,'Go Go Go');",

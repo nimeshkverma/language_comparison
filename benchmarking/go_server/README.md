@@ -17,4 +17,4 @@ In the server.go script:
 
 ## API's
 	- GET API to perform psql CRUD operations at `http://127.0.0.1:9090/crud`
-	- GET API to sleep for `a` milli seconds at `http://127.0.0.1:9090'/time_block?ms=a`
+	- GET API to sleep for `a` milli seconds at `http://127.0.0.1:9090/time_block?ms=a`

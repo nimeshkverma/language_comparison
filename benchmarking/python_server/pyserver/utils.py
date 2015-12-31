@@ -1,7 +1,7 @@
 import psycopg2
 from psycopg2.extras import RealDictCursor
 import datetime
-from config import PSQL_PARAMS, QUERY_DICT
+from config import PSQL_PARAMS, QUERY_DICT, CRUD_KEYS
 
 def psql_db_connect():
     """
@@ -28,15 +28,16 @@ def query_over_psql(query, return_bool):
     connection = psql_db_connect()
     cursor = connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
     cursor.execute(query)
+    connection.commit()
 
     if return_bool:
         rows = cursor.fetchall()
         return rows
     
 def perform_crud():
-    for key, query in QUERY_DICT.iteritems():
+    for key in CRUD_KEYS:
         if key == 'read':
-            query_over_psql(query, True)
+            query_over_psql(QUERY_DICT[key], True)
         else:
-            query_over_psql(query, False)
+            query_over_psql(QUERY_DICT[key], False)
 
